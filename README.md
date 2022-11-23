@@ -1,7 +1,13 @@
-# repo-eslint-plugin
+run
+```bash
+pnpm i 
+pnpm test # you will see a test get past
+```
 
-## install
-`pnpm i`
+uncomment ` // environment: 'happy-dom',` in `vite.config.ts`
 
-## reproduce
-`pnpm exec eslint .`
+rerun `pnpm test` , you will see the failed test
+
+the question mark missed
+
+
