@@ -4,6 +4,6 @@ import { expect, it, vi } from 'vitest';
 it('test', () => {
 
   const spy = vi.spyOn(rdt,'default','get');
-  rdt.default('https://www.taobao.com');
+  rdt.default('https://www.google.com');
   // expect(spy).toHaveBeenCalledTimes(1);
 });
