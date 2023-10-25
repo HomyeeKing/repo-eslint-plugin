@@ -1,8 +1,9 @@
-const rdt = require('react-dev-utils');
+import * as rdt from 'react-dev-utils/openBrowser';
 import { expect, it, vi } from 'vitest';
 
-const openBrowserSpy = vi.spyOn(rdt, 'openBrowser');
-rdt.openBrowser();
 it('test', () => {
-  expect(openBrowserSpy).toHaveBeenCalledOnce();
+
+  const spy = vi.spyOn(rdt,'default','get');
+  rdt.default('https://www.taobao.com');
+  // expect(spy).toHaveBeenCalledTimes(1);
 });

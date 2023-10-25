@@ -7,6 +7,8 @@
 		"vitest": "^0.34.6"
 	},
 	"dependencies": {
+		"mem-fs": "^4.0.0",
+		"mem-fs-editor": "^11.0.0",
 		"react-dev-utils": "^12.0.1"
 	}
 }
