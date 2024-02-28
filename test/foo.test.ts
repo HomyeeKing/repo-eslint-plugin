@@ -1,9 +1,14 @@
-import * as rdt from 'react-dev-utils/openBrowser';
+import { testFn } from '@/index';
 import { expect, it, vi } from 'vitest';
 
-it('test', () => {
+const mocks = vi.hoisted(() => {
+  import.meta.a = 1;
+  global.ddd = 2
+  return {
+    rdt: vi.fn(),
+  };
+});
 
-  const spy = vi.spyOn(rdt,'default','get');
-  rdt.default('https://www.google.com');
-  // expect(spy).toHaveBeenCalledTimes(1);
+it('test', () => {
+  expect(testFn()).toBe(true);
 });
