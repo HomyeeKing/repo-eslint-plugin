@@ -6,9 +6,17 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
+    dedupe: ['rax-image'],
   },
   test: {
     globals: true,
     // environment: 'happy-dom',
+    server: {
+      deps: {
+        inline: [
+          "@ice/appear"
+        ]
+      }
+    }
   },
 });
